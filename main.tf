@@ -14,7 +14,7 @@ module "KMS" {
 
 module "Secret_Manager" {
   source = "./modules/Security/secretmanager"
-  Secret_Manager_Name="asm-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-manager-${var.App_SequenceNumber}"
+  Secret_Manager_Name="asm-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-manager-02"
   App_EnvironmentType = var.App_EnvironmentType
   App_AcronymCode = var.App_AcronymCode
   App_ClusterCode = var.App_ClusterCode
