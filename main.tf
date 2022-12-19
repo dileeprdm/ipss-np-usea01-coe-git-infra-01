@@ -82,7 +82,6 @@ module "EC2_Autoscaling" {
   min_ec2_instance_count = var.min_ec2_instance_count
 }
 
-
 # Description : This Module creates S3 Bucket for AWS resources logs
 
 module "S3_Log_Bucket" {
