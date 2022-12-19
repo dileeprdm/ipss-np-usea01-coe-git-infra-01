@@ -1,0 +1,69 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "batch:SubmitJob",
+        "batch:TerminateJob",
+        "dynamodb:DeleteItem",
+        "kms:GenerateDataKeyWithoutPlaintext",
+        "s3:ListBucket",
+        "es:ESHttpDelete",
+        "es:ESHttpHead",
+        "logs:CreateLogStream",
+        "secretsmanager:GetSecretValue",
+        "es:DescribeElasticsearchDomain",
+        "kms:Encrypt",
+        "es:ESHttpPost",
+        "dynamodb:PartiQLInsert",
+        "dynamodb:GetItem",
+        "es:ESHttpPatch",
+        "kms:DescribeKey",
+        "es:DescribeElasticsearchDomains",
+        "kms:CreateGrant",
+        "ecr:BatchCheckLayerAvailability",
+        "dynamodb:BatchGetItem",
+        "s3:ListBucketMultipartUploads",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:UpdateTimeToLive",
+        "dynamodb:PutItem",
+        "dynamodb:PartiQLUpdate",
+        "ecr:GetDownloadUrlForLayer",
+        "es:ESHttpGet",
+        "dynamodb:Scan",
+        "dynamodb:Query",
+        "dynamodb:UpdateItem",
+        "s3:GetBucketVersioning",
+        "logs:PutLogEvents",
+        "kms:ListGrants",
+        "dynamodb:RestoreTableFromBackup",
+        "kms:RevokeGrant",
+        "kms:GenerateDataKey",
+        "ecr:BatchGetImage",
+        "dynamodb:UpdateTable",
+        "es:ESHttpPut",
+        "sqs:AddPermission",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes",
+        "sqs:ReceiveMessage",
+        "sqs:SendMessage",
+        "dynamodb:GetRecords",
+        "dynamodb:PartiQLDelete",
+        "ses:SendRawEmail",
+        "states:StartExecution"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

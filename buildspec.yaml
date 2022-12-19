@@ -18,4 +18,4 @@ phases:
 
   post_build:
     commands:
-      - echo terraform $TF_COMMAND completed on 'date'
+      - echo terraform $TF_COMMAND completed

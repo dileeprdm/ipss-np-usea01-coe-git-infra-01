@@ -1,0 +1,54 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "ecs:ListAttributes",
+        "ecr:UploadLayerPart",
+        "ecr:ListImages",
+        "ecs:UpdateService",
+        "codebuild:CreateReport",
+        "s3:GetObjectAcl",
+        "logs:CreateLogStream",
+        "secretsmanager:GetSecretValue",
+        "codebuild:UpdateReport",
+        "ecs:ListTasks",
+        "codebuild:BatchPutCodeCoverages",
+        "ecr:CompleteLayerUpload",
+        "ecs:StopTask",
+        "ecr:DescribeRepositories",
+        "s3:DeleteObject",
+        "ecr:BatchCheckLayerAvailability",
+        "s3:PutObjectAcl",
+        "ecr:GetDownloadUrlForLayer",
+        "logs:CreateLogGroup",
+        "logs:PutLogEvents",
+        "ecr:PutImage",
+        "s3:ListMultipartUploadParts",
+        "codebuild:CreateReportGroup",
+        "s3:PutObject",
+        "s3:GetObject",
+        "ecs:ListTagsForResource",
+        "kms:GenerateDataKey",
+        "ecr:BatchGetImage",
+        "ecr:DescribeImages",
+        "ecs:ListContainerInstances",
+        "codebuild:BatchPutTestCases",
+        "ecr:InitiateLayerUpload",
+        "s3:GetObjectVersion",
+        "ecr:GetRepositoryPolicy",
+        "lambda:GetFunctionConfiguration",
+        "lambda:GetFunction",
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:UpdateFunctionCode",
+        "lambda:PublishVersion"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
