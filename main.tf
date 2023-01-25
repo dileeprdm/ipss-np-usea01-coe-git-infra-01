@@ -1,7 +1,7 @@
 ###### Security################################################
 
 # Description : This Module creates KMS Key
-/*module "KMS" {
+module "KMS" {
   source = "./modules/Security/kms"
   Default_Tags = var.Default_Tags
   KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-03"
@@ -174,11 +174,11 @@ module "RDS_Securitygroup" {
   Securitygroup_Vpc_CIDR=module.VPC.vpc_cidr
   EC2_SG_ID=module.EC2.ec2instance_SecurityGroup_ID
   RDS_Database_Port = var.RDS_Aurora_Serverless_Database_Port_MySQL
-}*/
+}
       
 # Description : The Module create RDS Aurora Serverless --Need to pass the DB Engine based on requirement: MySQL or PostgreSQL
 
-/*module "RDS_Aurora_Serverless" {
+module "RDS_Aurora_Serverless" {
   source = "./modules/Database/rds-aurora-serverless/cluster"
   App_EnvironmentType = var.App_EnvironmentType
   App_AcronymCode = var.App_AcronymCode
@@ -217,7 +217,7 @@ module "RDS_Securitygroup" {
   RDS_Aurora_Serverless_Family = var.RDS_Aurora_Serverless_Family_MySQL
   RDS_Aurora_Securitygroup = module.RDS_Securitygroup.SG_RDS_ID
   RDS_Database_Master_UserName = var.RDS_Aurora_Serverless_Database_Master_UserName
-}*/
+}
 
 # Description : The Module create Cloudwatch Alarm for RDS Aurora Serverless MySQL
 
