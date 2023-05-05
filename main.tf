@@ -1,7 +1,7 @@
 ###### Security################################################
 
 # Description : This Module creates KMS Key
-module "KMS" {
+/*module "KMS" {
   source = "./modules/Security/kms"
   Default_Tags = var.Default_Tags
   KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-06"
@@ -22,7 +22,7 @@ module "Secret_Manager" {
   Secret_Recovery_Window_In_Days = var.Secret_Recovery_Window_In_Days
   KMS_Key_Secret = module.KMS.KMS_Key_ARN
   App_Seqnumber = var.App_SequenceNumber
-}
+}*/
 
 
 # Description : This Module creates the VPC, Subnets, internet and NAT Gateway
