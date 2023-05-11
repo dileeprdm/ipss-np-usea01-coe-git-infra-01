@@ -1,7 +1,7 @@
 ###### Security################################################
 
 # Description : This Module creates KMS Key
-module "KMS" {
+/*module "KMS" {
   source = "./modules/Security/kms"
   Default_Tags = var.Default_Tags
   KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-02"
@@ -129,7 +129,7 @@ module "Lambda_IAM_Role" {
 
 # This module creates Security group for Lambda function
 
-/*module "Lambda_Security_Group" {
+module "Lambda_Security_Group" {
   source = "./modules/Network & Content_Delivery/securitygroup"
   App_AcronymCode = var.App_AcronymCode
   Default_Tags = var.Default_Tags
