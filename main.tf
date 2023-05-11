@@ -12,7 +12,7 @@ module "KMS" {
 
 # Description : The Module creates Secret manager for RDS master and application database credentials
 
-/*module "Secret_Manager" {
+module "Secret_Manager" {
   source = "./modules/Security/secretmanager"
   Secret_Manager_Name="asm-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-manager-06"
   App_EnvironmentType = var.App_EnvironmentType
@@ -129,7 +129,7 @@ module "Lambda_IAM_Role" {
 
 # This module creates Security group for Lambda function
 
-module "Lambda_Security_Group" {
+/*module "Lambda_Security_Group" {
   source = "./modules/Network & Content_Delivery/securitygroup"
   App_AcronymCode = var.App_AcronymCode
   Default_Tags = var.Default_Tags
