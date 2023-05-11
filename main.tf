@@ -1,10 +1,10 @@
 ###### Security################################################
 
 # Description : This Module creates KMS Key
-/*module "KMS" {
+module "KMS" {
   source = "./modules/Security/kms"
   Default_Tags = var.Default_Tags
-  KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-06"
+  KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-09"
   KMS_Enable_Key_Rotation = var.KMS_Enable_Key_Rotation
   KMS_Key_Policy = file("packages/policies/KMS_Policy.json")
   KMS_Deletion_Window_In_Days = var.KMS_Deletion_Window_In_Days
@@ -14,7 +14,7 @@
 
 module "Secret_Manager" {
   source = "./modules/Security/secretmanager"
-  Secret_Manager_Name="asm-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-manager-07"
+  Secret_Manager_Name="asm-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-manager-06"
   App_EnvironmentType = var.App_EnvironmentType
   App_AcronymCode = var.App_AcronymCode
   App_ClusterCode = var.App_ClusterCode
@@ -22,12 +22,12 @@ module "Secret_Manager" {
   Secret_Recovery_Window_In_Days = var.Secret_Recovery_Window_In_Days
   KMS_Key_Secret = module.KMS.KMS_Key_ARN
   App_Seqnumber = var.App_SequenceNumber
-}*/
+}
 
 
 # Description : This Module creates the VPC, Subnets, internet and NAT Gateway
 
-/*module "VPC" {
+module "VPC" {
   source = "./modules/Network & Content_Delivery/vpc"
   Default_Tags              = var.Default_Tags
   vpc_cidr                  = var.VPC_CIDR
@@ -217,7 +217,7 @@ module "RDS_Aurora_Serverless" {
   RDS_Aurora_Serverless_Family = var.RDS_Aurora_Serverless_Family_MySQL
   RDS_Aurora_Securitygroup = module.RDS_Securitygroup.SG_RDS_ID
   RDS_Database_Master_UserName = var.RDS_Aurora_Serverless_Database_Master_UserName
-}*/
+}
 
 # Description : The Module create Cloudwatch Alarm for RDS Aurora Serverless MySQL
 
