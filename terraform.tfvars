@@ -15,7 +15,7 @@ App_EnvironmentType = "np"
 #Provide the Application ClusterCode"
 App_ClusterCode = "ipss"
 #AWS resource SequenceNumber
-App_SequenceNumber="01"
+App_SequenceNumber="02"
 
 #ApplicationName
 ApplicationName ="Tier_1_COE"
