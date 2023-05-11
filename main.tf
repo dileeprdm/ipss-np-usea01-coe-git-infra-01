@@ -4,7 +4,7 @@
 module "KMS" {
   source = "./modules/Security/kms"
   Default_Tags = var.Default_Tags
-  KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-01"
+  KMS_Key_Alias = "kms-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-02"
   KMS_Enable_Key_Rotation = var.KMS_Enable_Key_Rotation
   KMS_Key_Policy = file("packages/policies/KMS_Policy.json")
   KMS_Deletion_Window_In_Days = var.KMS_Deletion_Window_In_Days
