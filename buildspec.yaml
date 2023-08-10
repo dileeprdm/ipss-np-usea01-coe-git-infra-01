@@ -14,8 +14,8 @@ phases:
 
   build:
     commands:
-      - terraform apply -auto-approve
+      - terraform plan -auto-approve
 
   post_build:
     commands:
-      - echo terraform apply completed
+      - echo terraform plan completed
