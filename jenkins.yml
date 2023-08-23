@@ -2,7 +2,7 @@ version: 0.2
 pipeline:
  stages:
   stage1:
-    - echo Hello
+    - echo 'Hello'
   stage2:
     phases:
     install:
