@@ -12,9 +12,9 @@ variable "AWS_Region_Code" {
 variable "App_SequenceNumber" {
   description = "Provide the Application Acronymcode"
 }
-variable "Terraform_Profile" {
+/*variable "Terraform_Profile" {
   description = "Provide the profile name used for Terraform deployment"
-}
+}*/
 
 variable "App_EnvironmentType" {
   description = "Provide the environment in which the resources will be hosted"
