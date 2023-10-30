@@ -80,7 +80,7 @@ module "EC2_Autoscaling" {
   autoscaling_group_name = lower("asg-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-${var.App_SequenceNumber}")
   max_ec2_instance_count = var.max_ec2_instance_count
   min_ec2_instance_count = var.min_ec2_instance_count
-}
+}*/
 
 # Description : This Module creates S3 Bucket for AWS resources logs
 
@@ -99,7 +99,7 @@ module "S3_Log_Bucket" {
 }
 
 # Description : This Module creates S3-data bucket
-module "S3_Data_Bucket" {
+/*module "S3_Data_Bucket" {
   source               = "./modules/Storage/s3data"
   S3_Data_Bucket_name =  lower("s3b-${var.App_ClusterCode}-${var.App_EnvironmentType}-${var.AWS_Region_Code}-${var.App_AcronymCode}-${var.App_SequenceNumber}")
   Default_Tags         = var.Default_Tags
