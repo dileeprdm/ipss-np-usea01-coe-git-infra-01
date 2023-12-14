@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "S3_Log_Bucket" {
   bucket = var.s3_Log_Bucket_name
-  acl = "log-delivery-write"
+  #acl = "log-delivery-write"
   tags = merge(var.Default_Tags, tomap({Name=var.s3_Log_Bucket_name}))
   server_side_encryption_configuration {
     rule {
